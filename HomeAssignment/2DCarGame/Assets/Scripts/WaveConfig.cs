@@ -20,6 +20,12 @@ public class WaveConfig : ScriptableObject
     // Time between each obstacle spawn
     [SerializeField] float spawnInterval = 1f;
 
+    // Does the obstacle wave spawn a bullet?
+    [SerializeField] bool spawnBullet = false;
+
+    // Where is the bullet spawned on the x-axis
+    [SerializeField] float bulletX = 0f;
+
     // Encapsulation
     public GameObject GetObstaclePrefab()
     {
@@ -53,5 +59,15 @@ public class WaveConfig : ScriptableObject
     public float GetSpawnInterval()
     {
         return spawnInterval;
+    }
+
+    public bool GetSpawnBullet()
+    {
+        return spawnBullet;
+    }
+
+    public float GetBulletX()
+    {
+        return bulletX;
     }
 }
