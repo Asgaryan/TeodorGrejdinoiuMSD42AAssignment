@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
 
     // Variables for border around camera
     float xMin, xMax, yMin, yMax;
-    float padding = 1f;
+    float padding = 1.1f;
 
     // Start is called before the first frame update
     void Start()
