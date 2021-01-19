@@ -50,10 +50,5 @@ public class ObstaclePathing : MonoBehaviour
                 waypointIndex++;
             }
         }
-        //if obstacle moved to all waypoints
-        else
-        {
-            Destroy(gameObject);
-        }
     }
 }
