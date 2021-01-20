@@ -16,24 +16,36 @@ public class Level : MonoBehaviour
     {
         SceneManager.LoadScene("GameScene");
 
-        /*GameSession gs = FindObjectOfType<GameSession>();
+        GameSession gs = FindObjectOfType<GameSession>();
 
         if (gs != null)
         {
             // Reset the Game from beginning
             gs.ResetGame();
-        }*/
+        }
     }
 
     public void LoadGameOver()
     {
-        StartCoroutine(WaitAndLoad());
+        // Starts coroutine as a loss
+        StartCoroutine(WaitAndLoad(false));
     }
 
-    IEnumerator WaitAndLoad()
+    public void LoadWinner()
+    {
+        // Starts coroutine as a win
+        StartCoroutine(WaitAndLoad(true));
+    }
+
+    IEnumerator WaitAndLoad(bool win)
     {
         yield return new WaitForSeconds(delayInSeconds);
-        SceneManager.LoadScene("GameOver");
+
+        // Checks if the game is won to load the correct scene
+        if (win)
+            SceneManager.LoadScene("WinnerScene");
+        else
+            SceneManager.LoadScene("GameOverScene");
     }
 
     public void QuitGame()

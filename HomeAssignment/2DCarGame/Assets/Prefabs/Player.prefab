@@ -98,6 +98,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   moveSpeed: 7
+  playerDeathSound: {fileID: 8300000, guid: 45ef75f18b5432040a164d6361fadbdc, type: 3}
+  playerDeathSoundVolume: 0.75
+  gameOverSound: {fileID: 8300000, guid: ff26f7f520dbe9741bbefc2f85b14363, type: 3}
+  gameOverSoundVolume: 0.75
+  deathVFX: {fileID: 8127476859130387096, guid: adf825064fd436543a14b42c80ef914d, type: 3}
+  explosionDuration: 1
 --- !u!60 &-8720118361667009354
 PolygonCollider2D:
   m_ObjectHideFlags: 0
