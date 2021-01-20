@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     [SerializeField] float explosionDuration = 1f;
 
     // Variables for border around camera
-    float xMin, xMax, yMin, yMax;
+    float xMin, xMax;
     float padding = 1.1f;
 
     // Start is called before the first frame update
@@ -44,8 +44,6 @@ public class Player : MonoBehaviour
         
         xMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + padding;
         xMax = gameCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - padding;
-        yMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y + padding;
-        yMax = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - padding;
     }
 
     private void Move()
